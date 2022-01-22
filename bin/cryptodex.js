@@ -1,3 +1,9 @@
 #!/usr/bin/env node
 
-console.log("Program init working");
+const program = require("commander");
+const pkg = require("../package.json");
+
+program
+  .version(pkg.version)
+  .command("check", "Check portfolio value for tokens")
+  .parse(process.argv);
