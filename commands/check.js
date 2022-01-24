@@ -9,7 +9,9 @@ const check = {
         console.log(portfolio);
       }
       if (cmd.token !== undefined && cmd.date === undefined) {
-        const portfolio = await api.getPortfolioTokenOnly(cmd.token);
+        const portfolio = await api.getPortfolioTokenOnly(
+          cmd.token.toUpperCase()
+        );
         console.log(portfolio);
       }
       if (cmd.token === undefined && cmd.date !== undefined) {
@@ -18,7 +20,7 @@ const check = {
       }
       if (cmd.token !== undefined && cmd.date !== undefined) {
         const portfolio = await api.getPortfolioDateAndToken(
-          cmd.token,
+          cmd.token.toUpperCase(),
           cmd.date
         );
         console.log(portfolio);
