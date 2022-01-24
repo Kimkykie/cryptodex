@@ -3,7 +3,7 @@ const isValidToken = (token) => {
 };
 
 const isValidDate = (date) => {
-  const dateRegex = /[0-9]{1,2}(\/|-)[0-9]{1,2}(\/|-)[0-9]{4}/;
+  const dateRegex = /[0-9]{1,2}(\/)[0-9]{1,2}(\/)[0-9]{4}/;
   return date.match(dateRegex);
 };
 module.exports = { isValidToken, isValidDate };
