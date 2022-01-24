@@ -16,6 +16,13 @@ const check = {
         const portfolio = await api.getPortfolioDateOnly(cmd.date);
         console.log(portfolio);
       }
+      if (cmd.token !== undefined && cmd.date !== undefined) {
+        const portfolio = await api.getPortfolioDateAndToken(
+          cmd.token,
+          cmd.date
+        );
+        console.log(portfolio);
+      }
     } catch (error) {
       console.error(error.message.red);
     }
