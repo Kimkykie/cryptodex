@@ -40,7 +40,7 @@ npm link
 
 Check to see if cryptodex command is working by running cryptodex on your terminal. You should see this:
 
-![](/assets/command check.png)
+![](/assets/commandcheck.png)
 
 ## Usage
 
